@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1894.3">
-  <style type="text/css">
-  </style>
-</head>
-<body>
-</body>
-</html>
+const spans = document.querySelectorAll('h1 span')
+spans.forEach(span => span.addEventListener('mouseover',function(e) {span.classList.add('animated', 'rubberBand')
+}))
+spans.forEach(span.addEventListener('mouseout', function(e) {
+span.classList.remove('animated', 'rubberBand')
+}))
+
+const htmlBar = document.querySelector('.bar-html')
+const jsBar = document.querySelector('.bar-javascript')
+const reactBar = document.querySelector('.bar-react')
+
+var t1 = new TimelineLite()
+
+t1.fromTo(htmlBar, .75, {width: ' calc(0% - 6px)'}, {width: 'calc(90% - 6px)', ease: Power4.easeOut})
